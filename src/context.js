@@ -5,7 +5,7 @@ const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
-  const [loading,setLoading] = useState(false);
+  const [loading,setLoading] = useState(true);
   const [searchTerm,setSearchTerm] = useState('a');
   const [cocktails,setCocktails] = useState([])
 
@@ -25,8 +25,7 @@ const AppProvider = ({ children }) => {
       } else {
         setCocktails([])
       }
-      console.log(data)
-      
+      setLoading(false)
     } catch (error) {
       console.log('error')
       setLoading(false)
