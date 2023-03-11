@@ -316,6 +316,10 @@ Cocktail
 .drink img {
   border-radius: var(--mainBorderRadius);
 }
+
+.db-color {
+  color: #476a2e;
+}
 .drink p {
   font-weight: bold;
   text-transform: capitalize;
